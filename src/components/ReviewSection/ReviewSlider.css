@@ -1,0 +1,8 @@
+.RecentActivity .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+  }
+
+.RecentActivity .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #e39a59;
+  }

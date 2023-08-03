@@ -3,9 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      dancingScript: ['Dancing Script', 'cursive'],
+      dancingScript: ["Dancing Script", "cursive"],
       inter: ["Inter", "sans-serif"],
-      roboto: ['Roboto', 'sans-serif'],
+      roboto: ["Roboto", "sans-serif"],
     },
 
     extend: {
@@ -16,5 +16,5 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };

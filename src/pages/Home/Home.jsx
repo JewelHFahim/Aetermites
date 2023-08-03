@@ -1,35 +1,47 @@
 import Discount from "../../components/Discount/Discount";
 import FeaturedProduct from "../../components/FeaturedProduct/FeaturedProduct";
 import NewProduct from "../../components/NewProduct/NewProduct";
+import OurStory from "../../components/OurStory/OurStory";
+import RecentActivity from "../../components/RecentActivity/RecentActivity";
+import Review from "../../components/ReviewSection/Review";
 import HeaderSlider from "../../components/Slider/HeaderSlider/HeaderSlider";
 import Ancestral from "../../components/ancestral/Ancestral";
 import Category from "../../components/category/Category";
 import Pigments from "../../components/pigments/Pigments";
+import Socialcon from "../../utils/Socialcon";
 
 const Home = () => {
+
   return (
-    <div>
-      <HeaderSlider />
+    <div className="relative">
+      {/* <HeaderSlider /> */}
+{/* 
       <Category />
+
       <FeaturedProduct />
 
       <Ancestral />
 
-      <h1 className="mt-[198px] border h-[450px]">SLIDER NEW PRODUCT</h1>
+      <NewProduct />
 
       <Pigments />
-      <h1 className="mt-[140px] border h-[450px]">SLIDER OUR STORY</h1>
+
+      <OurStory />
 
       <Discount />
 
-      <h1 className="mt-[80px] border h-[450px]">SLIDER OUR RECENT ACTIVITY</h1>
+      <RecentActivity />
 
-      <NewProduct />
+      <Review />
 
-      <h1 className="mt-[144px] border h-[450px]">SLIDER OUR RECENT ACTIVITY</h1>
+      <div className="hidden md:block lg:block right-0 top-[400px] z-[99] fixed">
+        <Socialcon/>
+      </div> */}
 
     </div>
   );
+
+
 };
 
 export default Home;

@@ -17,7 +17,7 @@ export default function FeaturedSlider() {
         modules={[Autoplay, Navigation]}
         // loop={true}
         slidesPerView={3}
-        spaceBetween={40}
+        spaceBetween={300}
         className="FeaturedSliderSwiper pt-[75px]"
       >
         {[1, 2, 3, 4, 5, 6].map((item, i) => (

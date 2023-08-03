@@ -2,8 +2,8 @@ import img1 from "../../../assets/Asset 5.png";
 
 const FeaturedSinglePage = () => {
   return (
-    <div>
-      <div className="font-roboto w-[342px]">
+    
+      <div className="font-roboto w-[442px]">
         <img src={img1} alt="" className="w-[442px] h-[552px] rounded-[29px]" />
         <h2 className="text-[29px] font-[500px] text-[#000]">
           Silk Facial oil
@@ -19,7 +19,7 @@ const FeaturedSinglePage = () => {
           <p className="text-[#AB5306] font-[700]">$67.25</p>
         </div>
       </div>
-    </div>
+    
   );
 };
 

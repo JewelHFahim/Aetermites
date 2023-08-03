@@ -4,6 +4,7 @@ const FeaturedProduct = () => {
   return (
     <div className="mt-[50px] py-[50px]">
       <div className="flex items-center font-roboto">
+
         <div className=" w-full flex justify-center items-center">
           <div className="flex flex-col justify-start">
             <div className="">
