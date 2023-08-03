@@ -1,0 +1,20 @@
+.FeaturedSliderSwiper .swiper-wrapper {
+  position: relative !important;
+}
+
+.FeaturedSliderSwiper .swiper-button-prev {
+  position: absolute !important;
+  top: 25px;
+  left: 900px;
+  z-index: 99px;
+  color: #E39A59;
+}
+
+
+.FeaturedSliderSwiper .swiper-button-next {
+  position: absolute !important;
+  top: 25px;
+  left: 980px;
+  z-index: 99px;
+  color: #E39A59;
+}

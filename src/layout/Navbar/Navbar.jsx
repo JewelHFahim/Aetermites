@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.svg";
 import SearchField from "../../utils/SerachField";
+import { BiShoppingBag } from "react-icons/bi";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
@@ -24,19 +25,18 @@ const Navbar = () => {
     else body.classList.remove(...customBodyStyle);
 
     // Sticky strick
-    const customStyle = ["sticky-nav", "fixed", "border-b"];
-    window.onscroll = () => {
-      if (window.scrollY > 80) navRef.current.classList.add(...customStyle);
-      else navRef.current.classList.remove(...customStyle);
-    };
+    // const customStyle = ["sticky-nav", "fixed", "border-b"];
+    // window.onscroll = () => {
+    //   if (window.scrollY > 80) navRef.current.classList.add(...customStyle);
+    //   else navRef.current.classList.remove(...customStyle);
+    // };
+
   }, [state]);
 
   return (
     <div>
-      <nav ref={navRef} className="bg-white w-full top-0 z-20 border mt-[50px]">
-
+      <nav ref={navRef} className="bg-white w-full top-0 z-20 mt-[50px]">
         <div className="items-center px-4 max-w-screen mx-[86px ] md:px-8 lg:flex">
-
           <div className="flex items-center justify-between py-3 lg:py-4 lg:block">
             <a href="javascript:void(0)" className="text-center">
               <img src={logo} width={220} height={30} alt="Float UI logo" />
@@ -88,25 +88,23 @@ const Navbar = () => {
             }`}
           >
             <div>
-              <ul className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row">
+              <ul className="flex flex-col-reverse space-x-0 lg:space-x-6 lg:flex-row font-inter">
                 <div>
                   <SearchField />
                 </div>
 
-                <li className="mt-4 lg:mt-0">
-                  <a
-                    href="javascript:void(0)"
-                    className=""
-                  >
+                <button className="text-[30px] text-[#E39A59]">
+                  <BiShoppingBag />
+                </button>
+
+                <li className="mt-4 lg:mt-0 text-[17px]">
+                  <a href="javascript:void(0)" className="">
                     Login
                   </a>
                 </li>
 
-                <li className="mt-8 lg:mt-0">
-                  <a
-                    href="javascript:void(0)"
-                    className=""
-                  >
+                <li className="mt-8 lg:mt-0 text-[17px]">
+                  <a href="javascript:void(0)" className="">
                     Sign Up
                   </a>
                 </li>
@@ -129,9 +127,7 @@ const Navbar = () => {
               </ul>
             </div>
           </div>
-
         </div>
-
       </nav>
     </div>
   );

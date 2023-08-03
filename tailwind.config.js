@@ -3,14 +3,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
+      dancingScript: ['Dancing Script', 'cursive'],
       inter: ["Inter", "sans-serif"],
-      jaldi: ["Jaldi", "sans-serif"],
+      roboto: ['Roboto', 'sans-serif'],
     },
 
     extend: {
       colors: {
-        bgPrimary: "#131313",
+        primary: "#E39A59",
         bgSecondary: "#191919",
         bgOffWhite: "#EFEFEF",
       },

@@ -11,9 +11,9 @@ const SearchField = () => {
         <input
           type="text"
           placeholder="Search"
-          className="w-full py-3 pl-4 pr-12 text-gray-500 border rounded-[53px] outline-none bg-[#EAEAEA] focus:bg-white"
+          className="w-full py-1 pl-4 pr-12 text-gray-500 border rounded-[53px] outline-none bg-[#EAEAEA] focus:bg-white"
         />
-        <BsSearch className="absolute top-0 right-3 bottom-0 w-6 h-6 my-auto text-gray-400 " />
+        <BsSearch className="absolute top-0 right-3 bottom-0 w-5 h-5 my-auto text-gray-400 " />
       </div>
     </form>
   );
