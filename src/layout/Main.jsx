@@ -5,10 +5,10 @@ import Navbar2 from "./Navbar/Navbar2";
 
 const Main = () => {
   return (
-    <div>
+    <div className="border">
       <Navbar2 />
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

@@ -1,8 +1,38 @@
-.RecentActivity .swiper-pagination-bullet {
+.ReviewSlider .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
   }
 
-.RecentActivity .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.ReviewSlider .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: #e39a59;
+  }
+
+  /* .ReviewSliderImg{
+    background-image: url("../../assets/Asset 9.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  } */
+
+
+  
+  .ReviewSliderImg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/Asset 9.png");
+    background-size: cover;
+    opacity: 0.2;
+    backdrop-filter: blur(50px); 
+    z-index: -1;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .ReviewSlider .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+    }
   }

@@ -14,20 +14,20 @@ const ReviewSlider = () => {
         lopp={true}
         // spaceBetween={50}
         slidesPerView={1}
-        className="RecentActivity"
+        className="ReviewSlider"
       >
         {[1, 2, 3].map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="pb-[30px] px-[200px]">
+            <div className=" py-[30px] lg:px-[200px] ReviewSliderImg bg-white bg-opacity-[10%]">
 
               <div className="font-roboto text-center">
-                <p className="text-[23px] text-[#575555] tracking-[6.6px]">
+                <p className="text-[23px] text-[#575555] tracking-[3px] lg:tracking-[6.6px]">
                   OUR HAPPY CUSTOMER
                 </p>
-                <h1 className="text-[73px] text-[#000] font-[700] leading-[80px]">
+                <h1 className="text-[43px] lg:text-[73px] text-[#000] font-[700] lg:leading-[80px]">
                   REVIEW
                 </h1>
-                <p className="text-[#343434] text-[23px] italic mt-[80px]">
+                <p className="text-[#343434] text-[13px] lg:text-[23px] italic pt-[40px] lg:pt-[80px] px-[40px]">
                   All the Lorem Ipsum generators on the Internet tend to repeat
                   predefined chunks as necessary, making this the first true
                   generator on the Internet.
@@ -35,12 +35,12 @@ const ReviewSlider = () => {
               </div>
 
               <div className="text-center flex flex-col justify-center items-center mt-[37px]">
-                <img src={img1} alt="" className="w-[118px] h-[118px]" />
+                <img src={img1} alt="" className=" w-[56px] h-[56px] lg:w-[118px] lg:h-[118px]" />
                 <div>
-                  <h3 className="text-black text-opacity-[83%] text-[23px] font-[600] font-roboto">
+                  <h3 className="text-black text-opacity-[83%] text-[13px] lg:text-[23px] font-[600] font-roboto">
                     Sara Ivana Rose
                   </h3>
-                  <p className="text-[19px] text-[#3F3F3F] italic font-roboto">
+                  <p className="text-[11px] lg:text-[19px] text-[#3F3F3F] italic font-roboto">
                     @Actor
                   </p>
                 </div>

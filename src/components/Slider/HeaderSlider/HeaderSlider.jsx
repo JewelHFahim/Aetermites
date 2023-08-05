@@ -9,7 +9,7 @@ import SliderSinglePage from "./SliderSinglePage";
 
 export default function HeaderSlider() {
   return (
-    <div className="mt-[52px]">
+    <div className="mt-[28px] lg:mt-[52px]">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

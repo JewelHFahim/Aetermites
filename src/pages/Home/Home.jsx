@@ -11,11 +11,10 @@ import Pigments from "../../components/pigments/Pigments";
 import Socialcon from "../../utils/Socialcon";
 
 const Home = () => {
-
   return (
     <div className="relative">
-      {/* <HeaderSlider /> */}
-{/* 
+      <HeaderSlider />
+
       <Category />
 
       <FeaturedProduct />
@@ -34,14 +33,11 @@ const Home = () => {
 
       <Review />
 
-      <div className="hidden md:block lg:block right-0 top-[400px] z-[99] fixed">
+        <div className="hidden md:block lg:block right-0 top-[400px] z-[99] fixed">
         <Socialcon/>
-      </div> */}
-
+      </div>
     </div>
   );
-
-
 };
 
 export default Home;

@@ -1,3 +1,14 @@
-.RecentActivity .swiper-button-pre {
-    color: #ffffffa1;
+.RecentActivitySliderImg {
+  background-image: url("../../assets/Asset 8.png");
+  width: 454px;
+  height: 488px;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .RecentActivitySliderImg {
+    background-image: url("../../assets/Asset 8.png");
+    width: 136px;
+    height: 147px;
+  }
 }

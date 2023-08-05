@@ -3,12 +3,12 @@ import DiscountRight from "./DiscountRight";
 
 const Discount = () => {
   return (
-    <div className="flex gap-[56px] mt-[113px] border">
-      <div>
+    <div className="flex flex-col lg:flex-row lg:gap-[56px] gap-[15px] mt-[57px] lg:mt-[113px] ">
+      <div className="w-full">
         <DiscountLeft />
       </div>
      
-      <div>
+      <div className="w-full">
         <DiscountRight />
       </div>
     </div>

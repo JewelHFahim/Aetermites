@@ -1,10 +1,8 @@
 
-const Button = ({ children, className }) => {
+const Button = ({ children, className, style }) => {
   return (
     <button
-      className={`${className} text-[19px] font-bold rounded-[17px] py-[17px] px-[50px]`}
-      style={{ boxShadow: "4px 4px 11px 0px rgba(55, 55, 55, 0.18)" }}
-    >
+      className={`${className} text-[11px] lg:text-[19px] font-[700] rounded-[8px] w-[107px] h-[30px] lg:w-[193px] lg:h-[57px]`}>
       {children}
     </button>
   );
