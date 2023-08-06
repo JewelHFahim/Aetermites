@@ -1,16 +1,17 @@
 import pigments from "../../assets/imgs/pigments.png";
+import { ThemeContext } from "../../context/AppContext";
 import Button from "../../utils/Button";
 import Container from "../../utils/Container";
-import { useState } from "react";
+import { useContext } from "react";
 
 const Pigments = () => {
-  const [theme] = useState(false);
+  const { isDarkmode } = useContext(ThemeContext);
 
   return (
     <>
       <section className="mt-[40px] lg:mt-[162px] ">
         <Container>
-          <div className={`${theme ? "bg-[#030303] " : ""} `}>
+          <div className={`${isDarkmode ? "bg-secondary " : ""} `}>
             <div className=" lg:flex justify-between   items-center ">
               {/* destop */}
               <div>
@@ -18,14 +19,14 @@ const Pigments = () => {
                   <div>
                     <h1
                       className={`font-bold lg:text-[73px] ${
-                        theme ? "text-white" : ""
+                        isDarkmode ? "text-white" : ""
                       }`}
                     >
                       BEST PIGMENTS
                     </h1>
                     <p
                       className={` hidden lg:block mt-[35px] mb-[40px] leading-[31px] text-[19px] ${
-                        theme ? "text-[#FFFFFFBA] " : ""
+                        isDarkmode ? "text-[#FFFFFFBA] " : ""
                       } `}
                     >
                       Lorem Ipsum is simply dummy text of the printing and
@@ -37,7 +38,7 @@ const Pigments = () => {
                       electronic typesetting, <br /> remaining essentially
                       unchanged.
                     </p>
-                    <Button className={"bg-white text-black "}>
+                    <Button className={`bg-primary  ${isDarkmode ? "" : "text-white"}`}>
                       Read More
                     </Button>
                   </div>
@@ -46,7 +47,7 @@ const Pigments = () => {
               {/* phone */}
               <h1
                 className={`font-bold text-center mb-[27px]  lg:hidden font-roboto  ${
-                  theme ? "text-white" : ""
+                  isDarkmode ? "text-white" : ""
                 } `}
               >
                 <p className="text-[#E39A59] text-[33px]"> BEST </p>
@@ -63,14 +64,14 @@ const Pigments = () => {
               <div className="text-center lg:hidden">
                 <p
                   className={`px-[22.5px] lg:px-0 lg:hidden text-center font-roboto text-[11px] mt-[23px] mb-[16px] leading-[13px]  ${
-                    theme ? "text-[#FFFFFFBA] " : ""
+                    isDarkmode ? "text-[#FFFFFFBA] " : ""
                   }`}
                 >
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry.
                 </p>
                 <Button
-                  className={"bg-[#E39A59]  text-white"}
+                  className={`bg-primary ${isDarkmode ? "text-white" : "text-white"}`}
                   style={{
                     boxShadow: "4px 4px 11px 0px rgba(55, 55, 55, 0.18)",
                   }}

@@ -1,13 +1,19 @@
+import { useContext } from "react";
 import facebook from "../assets/f.svg";
 import insta from "../assets/i.svg";
 import linkedin from "../assets/l.svg";
 import twitter from "../assets/t.svg";
+import { ThemeContext } from "../context/AppContext";
 
 const Socialcon = () => {
+  const { isDarkmode } = useContext(ThemeContext);
+
   return (
-    <div className="flex w-[57px] justify-center items-center gap-[7.5px] h-[177px] bg-white rounded-s-[11px]">
+    <div
+      className={`flex w-[57px] justify-center items-center gap-[7.5px] h-[177px] rounded-s-[11px] drop-shadow-md ${isDarkmode ? "bg-secondary " : "bg-white"}`}
+    >
       <p
-        className="text-[13px] text-[#3E3E3E] font-roboto text-"
+        className={`text-[13px] font-roboto ${ isDarkmode ? "text-white" : "text-[#3E3E3E]"}`}
         style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
       >
         Our Social Media

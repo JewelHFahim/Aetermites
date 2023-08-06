@@ -1,10 +1,8 @@
-import img1 from "../../../assets/Asset 1.png"
-
-const SliderSinglePage = () => {
+const SliderSinglePage = ({data}) => {
 
     return (
-        <div className="w-full h-[70vh]">
-           <img src={img1} alt="" className="h-full w-full object-fil" />
+        <div className="w-full lg:h-[78vh]">
+           <img src={data.img} alt="" className="h-full w-full object-cover" />
         </div>
     );
 };

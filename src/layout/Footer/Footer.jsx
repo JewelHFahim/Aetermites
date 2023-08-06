@@ -1,26 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import logo from "../../assets/imgs/AETERNITAS_LOGO.svg";
-import copy_right_icon from "../../assets/imgs/copy_right_icon.svg";
-
-import FooterColumn from "./FooterColumn";
-import Newsletter from "./Newsletter";
+import { ThemeContext } from "../../context/AppContext";
 
 const Footer = () => {
   const [theme] = useState(false);
 
-  return (
-    <div>
-    
+  const { isDarkmode } = useContext(ThemeContext)
 
-      <footer className={` "  `}>
-        <div className="  lg:py-[70px] lg:px-[240px]  bg-[#4F4F4F]">
+  return (
+    <footer className="">
+
+      <div>
+        {/* About Store + Categories + Support */}
+        <div className="pb-[50px] lg:py-[70px] lg:px-[240px]  bg-[#4F4F4F]">
           <div className=" pt-[48px] flex flex-col justify-between ">
-            <div className="flex justify-between pr-[23px] pl-[43px]">
+            <div className="grid grid-cols-2 lg:grid-cols-4 justify-between pr-[23px] pl-[43px]">
+              {/* About Store */}
               <div>
                 <h2 className="lg:text-[27px] text-[19px]  font-medium text-[#EAEAEA] mb-[14px]">
                   About Store
                 </h2>
                 <div className="lg:w-[194px]  w-[111px]  h-[3px] bg-[#777] opacity-60"></div>
+
                 <ul className=" lg:mt-[28px] mt-[13px] flex flex-col gap-[16.5px] font-medium text-[#FFF] opacity-60">
                   <li>
                     <a href="">Home</a>
@@ -45,6 +46,8 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
+
+              {/* Categories */}
               <div className="hidden lg:block ">
                 <h2 className="text-[27px] font-medium text-[#EAEAEA] mb-[14px]">
                   Categories
@@ -75,6 +78,7 @@ const Footer = () => {
                 </ul>
               </div>
 
+              {/* Support */}
               <div>
                 <h2 className="lg:text-[27px] text-[19px] font-medium text-[#EAEAEA] mb-[14px]">
                   Support
@@ -101,85 +105,74 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
 
-        {/* newsletter */}
-
-        <div className=" bg-[#4F4F4F] pr-[23px] pl-[43px] py-[59px] ">
-          <h2 className="text-[27px] font-medium text-[#EAEAEA] mb-[14px]">
-            Newsletter
-          </h2>
-          <div className="w-[194px] h-[3px] bg-[#777] opacity-60"></div>
-          <p className="text-[13px]  mt-[28px] w-[240.5px] text-[#FFFFFFBB]">
-            Sign up for our newsletter and be the first to receive the news
-            about offers, new arrivals and amazing events.
-          </p>
-
-          <form>
-            <div>
-              <div className="  relative bg-white rounded-[3px] text-[11px] w-[240.5px] my-[35px] flex  justify-between">
-                <input
-                  className=" w-full pl-[5px]  py-[9.5px]  rounded-[3px] overflow-hidden"
-                  type="email"
-                  placeholder="Your email address "
-                />
-                <button
-                  type="submit"
-                  className="bg-[#0E0E0E] text-white  px-[9.5px] rounded-[3px]"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </div>
-            <div className="text-[13px] font-light text-[#FFFFFFBB]">
-              <input type="checkbox" />
-
-              <sapn> I have read the information regarding </sapn>
-
-              <p className="w-[240.5px]">
-                the processing of my personal data by INGLOT SP. Z O.O. in the
-                context of the newsletter.
-              </p>
-            </div>
-          </form>
-        </div>
-
-        {/* footer bottom */}
-        <div
-          className={` ${
-            theme ? " bg-[#4F4F4F] " : "bg-[#070707]"
-          }  py-[19.5px]  opacity-60 lg:px-[240px]`}
-        >
-          <div className="flex flex-col items-center ">
-            <div className="lg:flex justify-between items-center ">
-              <div className="w-[220px] flex flex-col items-center gap-[5.5px] ">
-                <img className="w-full" src={logo} alt="Logo" />
-                <span className="text-[#D6D6D6] font-light text-[17px]">
-                  Radiate Beauty, Naturally
-                </span>
-              </div>
-              <div className="mt-[16px]">
-                <div className="  text-[13px] text-[#D6D6D6] font-light flex gap-[9px]">
-                  <p>Copyright</p>
-                  <div className=" w-[20px] h-[20] ">
-                    <img src={copy_right_icon} alt="copy_right_icon" />
-                  </div>
-                  <p>
-                    2023 Sephora USA, Inc.
-                    <span className="hidden lg:block">All rights reserved</span>
-                  </p>
-                </div>
-                <p className=" text-[13px] text-[#D6D6D6] font-light text-center">
-                  All rights reserved
+              {/* Newsletter */}
+              <div className=" bg-[#4F4F4F] mt-[20px] lg:mt-0">
+                <h2 className="text-[27px] font-medium text-[#EAEAEA] mb-[14px]">
+                  Newsletter
+                </h2>
+                <div className="w-[194px] h-[3px] bg-[#777] opacity-60"></div>
+                <p className="text-[13px]  mt-[28px] w-[240.5px] text-[#FFFFFFBB]">
+                  Sign up for our newsletter and be the first to receive the
+                  news about offers, new arrivals and amazing events.
                 </p>
+
+                <form>
+                  <div>
+                    <div className="  relative bg-white rounded-[3px] text-[11px] w-[240.5px] my-[35px] flex  justify-between">
+                      <input
+                        className=" w-full pl-[5px]  py-[9.5px]  rounded-[3px] overflow-hidden"
+                        type="email"
+                        placeholder="Your email address "
+                      />
+                      <button
+                        type="submit"
+                        className="bg-[#0E0E0E] text-white  px-[9.5px] rounded-[3px]"
+                      >
+                        Subscribe
+                      </button>
+                    </div>
+                  </div>
+                  <div className="text-[13px] font-light text-[#FFFFFFBB]">
+                    <input type="checkbox" />
+
+                    <sapn> I have read the information regarding </sapn>
+
+                    <p className="w-[240.5px]">
+                      the processing of my personal data by INGLOT SP. Z O.O. in
+                      the context of the newsletter.
+                    </p>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+
+      {/* footer bottom */}
+      <div
+        className={` ${ isDarkmode ? " bg-[#4F4F4F]" : "bg-[#070707]"} py-[30px] opacity-60 lg:px-[240px] flex justify-center lg:block`}
+      >
+        <div className="lg:flex lg:justify-between justify-center items-center">
+          <div className=" w-[220px] flex flex-col items-center gap-[5.5px]">
+            <img className="w-full" src={logo} alt="Logo" />
+            <span className="text-[#D6D6D6] font-light text-[17px]">
+              Radiate Beauty, Naturally
+            </span>
+          </div>
+
+          <div className={` mt-[15px] text-[13px] text-[#D6D6D6] font-light flex flex-col lg:flex-row items-center gap-[9px] ${isDarkmode ? "" : ""}`}>
+            <p>
+              Copyright <span className="text-[16px]">&#x24B8;</span> 2023
+              Sephora USA, Inc.
+            </p>
+            <p className="mt-[-6px] lg:mt-0"> All rights reserved </p>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
   );
 };
 

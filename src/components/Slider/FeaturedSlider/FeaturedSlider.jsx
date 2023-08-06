@@ -20,7 +20,7 @@ export default function FeaturedSlider() {
         spaceBetween={300}
 
         
-        className="FeaturedSliderSwiper pt-[20px] lg:pt-[75px] border border-red-600"
+        className="FeaturedSliderSwiper pt-[20px] lg:pt-[75px]"
       >
         {[1, 2, 3, 4, 5, 6].map((item, i) => (
           <SwiperSlide key={i}>

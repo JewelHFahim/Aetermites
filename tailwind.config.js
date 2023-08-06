@@ -11,8 +11,8 @@ export default {
     extend: {
       colors: {
         primary: "#E39A59",
-        bgSecondary: "#191919",
-        bgOffWhite: "#EFEFEF",
+        secondary: "#1F1F1F",
+        offWhite: "#CFCFCF",
       },
     },
   },

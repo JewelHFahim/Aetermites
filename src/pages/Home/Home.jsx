@@ -11,8 +11,10 @@ import Pigments from "../../components/pigments/Pigments";
 import Socialcon from "../../utils/Socialcon";
 
 const Home = () => {
+
   return (
-    <div className="relative">
+    <div>
+
       <HeaderSlider />
 
       <Category />

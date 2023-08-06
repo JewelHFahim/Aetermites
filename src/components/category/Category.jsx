@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import img1 from "../../assets/Asset 2.png";
 import img2 from "../../assets/Asset 3.png";
 import img3 from "../../assets/Asset 4.png";
+import { ThemeContext } from "../../context/AppContext";
 
 const Category = () => {
+
+  const { isDarkmode } = useContext(ThemeContext)
 
     const datas =[
         {
@@ -21,9 +25,7 @@ const Category = () => {
 
   return (
     <div className="py-[20px] lg:py-[50px] mt-[24px] lg:mt-[50px]">
-      <h1 className="text-center text-[33px] lg:text-[73px] font-[700] font-roboto text-black uppercase">
-        Category
-      </h1>
+      <h1 className={`text-center text-[33px] lg:text-[73px] font-[700] font-roboto uppercase ${isDarkmode ? "text-offWhite" : "text-black"}`}> Category </h1>
 
       <div className="flex justify-center mt-[20px] lg:mt-[70px]">
         <div className="grid grid-cols-3 gap-4 lg:gap-[60px]">

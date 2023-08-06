@@ -1,13 +1,16 @@
-import img1 from "../../assets/Asset 6.png";
-import img2 from "../../assets/Asset 11.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import "./NewProduct.css";
 import Button from "../../utils/Button";
+import { useContext } from "react";
+import { ThemeContext } from "../../context/AppContext";
 
 const NewProduct = () => {
+
+  const {isDarkmode} =useContext(ThemeContext)
+
   const datas = [
     {
       color: "#F64949",
@@ -70,7 +73,7 @@ const NewProduct = () => {
               </div>
 
               <div className="mb-[-12px] lg:mt-[440px] lg:mr-[160px] z-99]">
-                <Button className="bg-white text-primary drop-shadow shadow-md shadow-primary" 
+                <Button className={` drop-shadow shadow-md shadow-primary ${isDarkmode ? "bg-secondary text-primary" : "bg-white text-primary"}`} 
                 style={{ boxShadow: "4px 4px 11px 0px rgba(55, 55, 55, 0.18)" }}> Order Now </Button>
               </div>
 
