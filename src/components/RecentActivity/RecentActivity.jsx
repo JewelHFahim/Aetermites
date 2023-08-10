@@ -5,17 +5,21 @@ import "swiper/css";
 import "./RecentActivity.css";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/AppContext";
+import { Roll } from "react-reveal";
 
 const RecentActivity = () => {
   const { isDarkmode } = useContext(ThemeContext);
 
   return (
     <div className=" mt-[40px] lg:mt-[80px] lg:mx-[124px] lg:px-[40px]">
+      
+      <Roll right>
       <h1
         className={`hidden lg:block text-center lg:text-[73px] font-[700] font-roboto uppercase ${isDarkmode ? "text-white" : "text-black"}`}
       >
         Our Recent Activity
       </h1>
+      </Roll>
 
       <h1 className={`lg:hidden text-center text-[37px] font-[700] font-roboto uppercase leading-[40px] ${ isDarkmode ? "text-offWhite" : "text-[#000] "}`}>
         Our <br /> <span className="text-[29px]">Recent Activity</span>
@@ -30,6 +34,7 @@ const RecentActivity = () => {
       >
         {[1, 2, 3, 4, 5].map((item, i) => (
           <SwiperSlide key={i}>
+
             <div className="RecentActivitySliderImg flex items-end">
               <div className=" z-[2] w-full h-full lg:h-[230px] bg-[#00000078] lg:rounded-[29px] opacity-0 hover:opacity-[1] transform duration-300 font-roboto px-[10px] py-[12px] lg:px-[27px] lg:py-[25px]">
                 <h1 className="text-[15px] lg:text-[30px]  text-white font-[500] ">
@@ -49,6 +54,7 @@ const RecentActivity = () => {
                 </p>
               </div>
             </div>
+
           </SwiperSlide>
         ))}
       </Swiper>

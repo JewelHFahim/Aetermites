@@ -13,15 +13,16 @@ const MobileSearch = () => {
 
   return (
     <div className="relative">
+      
       <button
         onClick={toggleSearchBar}
-        className={`text-[25px] ${isDarkmode ? "text-offWhite" : ""}`}
+        className={`${isDarkmode ? "text-offWhite" : ""}`}
       >
-        <FiSearch />
+        <FiSearch className="w-[24px] h-[24px]"/>
       </button>
 
       {showSearchBar && (
-        <div className=" absolute right-0 transform duration-500 rounded-lg">
+        <div className=" absolute -right-11 mt-1.5 transform duration-500 rounded-lg">
           <input
             className="border rounded-[29px] text-[16px] w-[280px] pl-[10px] py-[4px] outline-none"
             type="text"

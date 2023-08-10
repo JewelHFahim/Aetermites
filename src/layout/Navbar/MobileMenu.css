@@ -1,0 +1,11 @@
+.EZDrawer.EZDrawer__container {
+    position: fixed;
+    visibility: hidden;
+    /* background: rgba(219, 219, 219, 0.80); */
+    transition: all;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu :where(li > details > summary):after {
+    display: none !important;
+}

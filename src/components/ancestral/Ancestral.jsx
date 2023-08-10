@@ -5,8 +5,7 @@ import Container from "../../utils/Container";
 import { ThemeContext } from "../../context/AppContext";
 
 const Ancestral = () => {
-
-  const {isDarkmode} = useContext(ThemeContext)
+  const { isDarkmode } = useContext(ThemeContext);
 
   return (
     <>
@@ -21,7 +20,11 @@ const Ancestral = () => {
               <p className="text-[#E39A59]">ANCESTRAL</p>
               <p className="-mt-[6px]"> INGREDIENTS</p>
             </h1>
-            <div className=" lg:max-w-[864px]">
+            <div
+              data-aos-duration="1000"
+              data-aos="fade-right"
+              className="lg:max-w-[864px]"
+            >
               <img
                 className="w-full"
                 src={ancestral}
@@ -31,6 +34,8 @@ const Ancestral = () => {
             <div className="text-center lg:text-start">
               {/* Hidden on Phone */}
               <h1
+                data-aos-duration="1000"
+                data-aos="fade-left"
                 className={`font-bold lg:text-[57px]  hidden lg:block ${
                   isDarkmode ? "text-white" : ""
                 } `}
@@ -38,6 +43,8 @@ const Ancestral = () => {
                 ANCESTRAL INGREDIENTS
               </h1>
               <p
+                data-aos-duration="1500"
+                data-aos="fade-left"
                 className={`hidden lg:block lg:mt-[35px] lg:mb-[40px] leading-[31px] lg:text-[19px] ${
                   isDarkmode ? "text-[#FFFFFFBA] " : ""
                 }`}
@@ -57,7 +64,12 @@ const Ancestral = () => {
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
-              <Button className={`bg-[#E39A59]   ${isDarkmode ? "" : "text-white"} `}>Read More</Button>
+
+              <div data-aos-duration="2000" data-aos="fade-left">
+                <Button className={`bg-[#E39A59]   ${isDarkmode ? "" : "text-white"} `}>
+                  Read More
+                </Button>
+              </div>
             </div>
           </div>
         </section>

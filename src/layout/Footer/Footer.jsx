@@ -14,7 +14,7 @@ const Footer = () => {
         {/* About Store + Categories + Support */}
         <div className="pb-[50px] lg:py-[70px] lg:px-[240px]  bg-[#4F4F4F]">
           <div className=" pt-[48px] flex flex-col justify-between ">
-            <div className="grid grid-cols-2 lg:grid-cols-4 justify-between pr-[23px] pl-[43px]">
+            <div className="grid grid-cols-2 lg:grid-cols-4 justify-between gap-[80px] lg:gap-0 pr-[23px] pl-[43px]">
               {/* About Store */}
               <div>
                 <h2 className="lg:text-[27px] text-[19px]  font-medium text-[#EAEAEA] mb-[14px]">
